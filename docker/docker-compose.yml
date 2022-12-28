@@ -1,0 +1,12 @@
+version: "3.0.1"
+
+services:
+  db:
+    image: postgres:14.2-alpine
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: test
+      POSTGRES_USER: test
+      POSTGRES_DB: loja
+    ports:
+      - "5432:5432"
