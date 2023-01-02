@@ -44,3 +44,16 @@ func Insert(w http.ResponseWriter, r *http.Request) {
 
 	http.Redirect(w, r, "/", 301)
 }
+
+func Delete(w http.ResponseWriter, r *http.Request) {
+	id := r.URL.Query().Get("id")
+	idConvertido, err := strconv.Atoi(id)
+
+	if err != nil {
+		log.Println("Erro na conversão do id:", err)
+	}
+
+	models.DeletaProduto(idConvertido)
+
+	http.Redirect(w, r, "/", 301)
+}
