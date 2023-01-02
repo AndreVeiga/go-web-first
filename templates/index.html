@@ -27,7 +27,7 @@
                             <td>{{.Preco}}</td>
                             <td>{{.Quantidade}}</td>
                             <td>
-                                <button class="btn btn-primary">Editar</button>
+                                <a href="/edit?id={{.Id}}" class="btn btn-info">Editar</a>
                             </td>
                             <td>
                                 <button class="btn btn-danger" onclick="onDelete('{{.Id}}')">Deletar</button>
